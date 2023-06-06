@@ -15,8 +15,8 @@ add wave -noupdate -label RX_in /simple_processor_tb/uut/RX_in
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {20000 ps} 0}
 quietly wave cursor active 1
-configure wave -namecolwidth 73
-configure wave -valuecolwidth 64
+configure wave -namecolwidth 200
+configure wave -valuecolwidth 200
 configure wave -justifyvalue left
 configure wave -signalnamewidth 0
 configure wave -snapdistance 10
