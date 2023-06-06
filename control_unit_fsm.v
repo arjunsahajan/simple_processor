@@ -152,7 +152,7 @@ module control_unit_fsm
 	always @(posedge clk)
 	begin
 	
-		if(!reset_n || done)
+		if(!reset_n)
 			state <= IDLE;
 		else if(!run)
 			state <= T0;
