@@ -14,9 +14,9 @@ module regn
 	always @(posedge clk)
 	begin
 	  if (!clear)
-			Q <= 0;
+			Q_reg <= 0;
 	  else if (!load)
-			Q <= D;
+			Q_reg <= D;
 	end
 
 	assign Q = Q_reg;
