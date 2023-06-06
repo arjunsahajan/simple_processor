@@ -1,10 +1,17 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
-add wave -noupdate -label Cin /simple_processor_tb/U1/Cin
-add wave -noupdate -label X -radix hexadecimal /simple_processor_tb/U1/X
-add wave -noupdate -label Y -radix hexadecimal /simple_processor_tb/U1/Y
-add wave -noupdate -label Sum -radix hexadecimal /simple_processor_tb/U1/Sum
-add wave -noupdate -label Cout /simple_processor_tb/U1/Cout
+add wave -noupdate -label clk_50MHz /simple_processor_tb/uut/clk_50MHz
+add wave -noupdate -label run /simple_processor_tb/uut/run
+add wave -noupdate -label reset_n /simple_processor_tb/uut/reset_n
+add wave -noupdate -label DIN /simple_processor_tb/uut/DIN
+add wave -noupdate -label done /simple_processor_tb/uut/done
+add wave -noupdate -label IR_out /simple_processor_tb/uut/IR_out
+add wave -noupdate -label R0_out /simple_processor_tb/uut/R0_out
+add wave -noupdate -label R1_out /simple_processor_tb/uut/R1_out
+add wave -noupdate -label mux_out /simple_processor_tb/uut/mux_out
+add wave -noupdate -label sel /simple_processor_tb/uut/sel
+add wave -noupdate -label IR_in /simple_processor_tb/uut/IR_in
+add wave -noupdate -label RX_in /simple_processor_tb/uut/RX_in
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {20000 ps} 0}
 quietly wave cursor active 1

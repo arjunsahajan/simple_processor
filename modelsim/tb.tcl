@@ -9,7 +9,7 @@ vlog -nolock ../*.v
 # compile the Verilog code of the testbench
 vlog -nolock ../tb/*.v
 # start the Simulator
-vsim work.Addern_tb -Lf 220model -Lf altera_mf_ver -Lf verilog
+vsim work.simple_processor_tb -Lf 220model -Lf altera_mf_ver -Lf verilog
 # show waveforms specified in wave.do
 do wave.do
 # advance the simulation the desired amount of time
