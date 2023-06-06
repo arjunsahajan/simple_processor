@@ -14,10 +14,9 @@ module simple_processor
 	wire [3: 0] sel;
 	wire IR_in, G_in, A_in;
 	wire [7: 0] RX_in;
-	wire [15: 0] DIN;
 	
 	// Instruction register
-	register #(.N(16)) IR
+	regn #(.N(16)) IR
 	(
 		.clk(clk_50MHz),
 		.D(DIN),
@@ -44,7 +43,7 @@ module simple_processor
 	);
 	
 	// 16-bit general purpose registers R0 - R7
-	register #(.N(16)) R0
+	regn #(.N(16)) R0
 	(
 		.clk(clk_50MHz),
 		.D(mux_out),
@@ -54,7 +53,7 @@ module simple_processor
 		.Q(R0_out)
 	);
 	
-	register #(.N(16)) R1
+	regn #(.N(16)) R1
 	(
 		.clk(clk_50MHz),
 		.D(mux_out),
@@ -64,7 +63,7 @@ module simple_processor
 		.Q(R1_out)
 	);
 	
-	register #(.N(16)) R2
+	regn #(.N(16)) R2
 	(
 		.clk(clk_50MHz),
 		.D(mux_out),
@@ -74,7 +73,7 @@ module simple_processor
 		.Q(R2_out)
 	);
 	
-	register #(.N(16)) R3
+	regn #(.N(16)) R3
 	(
 		.clk(clk_50MHz),
 		.D(mux_out),
@@ -84,7 +83,7 @@ module simple_processor
 		.Q(R3_out)
 	);
 	
-	register #(.N(16)) R4
+	regn #(.N(16)) R4
 	(
 		.clk(clk_50MHz),
 		.D(mux_out),
@@ -94,7 +93,7 @@ module simple_processor
 		.Q(R4_out)
 	);
 	
-	register #(.N(16)) R5
+	regn #(.N(16)) R5
 	(
 		.clk(clk_50MHz),
 		.D(mux_out),
@@ -104,7 +103,7 @@ module simple_processor
 		.Q(R5_out)
 	);
 	
-	register #(.N(16)) R6
+	regn #(.N(16)) R6
 	(
 		.clk(clk_50MHz),
 		.D(mux_out),
@@ -114,7 +113,7 @@ module simple_processor
 		.Q(R6_out)
 	);
 	
-	register #(.N(16)) R7
+	regn #(.N(16)) R7
 	(
 		.clk(clk_50MHz),
 		.D(mux_out),
@@ -125,7 +124,7 @@ module simple_processor
 	);
 	
 	// Output register
-	register #(.N(16)) G
+	regn #(.N(16)) G
 	(
 		.clk(clk_50MHz),
 		.D(sum),
@@ -136,7 +135,7 @@ module simple_processor
 	);
 
 	// Accumulator
-	register #(.N(16)) A
+	regn #(.N(16)) A
 	(
 		.clk(clk_50MHz),
 		.D(mux_out),
