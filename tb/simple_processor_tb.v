@@ -55,6 +55,9 @@ module simple_processor_tb ();
 		
 		#20	run	<= 1'b0; DIN	<= 16'b0001000111111111; // mv  r0, #-1	
 		#20	run	<= 1'b1;
+		
+		#20	run	<= 1'b0; DIN	<= 16'b0001000011111111; // mv  r0, #255	
+		#20	run	<= 1'b1;
 	end
 	
 endmodule
