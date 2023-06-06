@@ -40,15 +40,18 @@ module simple_processor_tb ();
 	initial 
 	begin
 				run	<= 1'b1;	DIN	<= 16'b0000000000000000;	
+				
 		#20	run	<= 1'b0; DIN	<= 16'b0001000000011100; // mv  r0, #28	
 		#20	run	<= 1'b1; 
 		
-//		#20	run	<= 1'b0; DIN	<= 16'b0000001000000000; // mv r1, r0
-//		#20	run	<= 1'b1;
-//		#20	run	<= 1'b0; DIN	<= 16'b0011001011111111; // mvt r1, #0xFF
-//		#20	run	<= 1'b1;
-//		#20	run	<= 1'b0; DIN	<= 16'b0101001011111111; // add r1, #0xFF
-//		#20	run	<= 1'b1;
+		#20	run	<= 1'b0; DIN	<= 16'b0000001000000000; // mv r1, r0
+		#20	run	<= 1'b1;
+
+		#20	run	<= 1'b0; DIN	<= 16'b0011001011111111; // mvt r1, #0xFF
+		#20	run	<= 1'b1;
+
+		#20	run	<= 1'b0; DIN	<= 16'b0101001011111111; // add r1, #0xFF
+		#20	run	<= 1'b1;
 	end
 	
 endmodule
