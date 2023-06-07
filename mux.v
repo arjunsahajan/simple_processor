@@ -32,12 +32,10 @@ module mux
 			
 			4'b1000: 
 			begin
-				if(inp8[15: 13] == MV)
-					mux_out_reg <= {inp8[8], inp8[8], inp8[8], inp8[8], inp8[8], inp8[8], inp8[8], inp8[8: 0]};
-				else if(inp8[15: 13] == MVT)
+				if(inp8[15: 13] == MVT)
 					mux_out_reg <= {inp8[7: 0], 8'b0};
 				else
-					mux_out_reg <= {8'b0, inp8[7: 0]};
+					mux_out_reg <= {{7{inp8[8]}}, inp8[8: 0]};
 			end
 			
 			4'b1001: mux_out_reg <= inp9;
