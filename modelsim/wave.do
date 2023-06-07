@@ -9,9 +9,15 @@ add wave -noupdate -label IR_out /simple_processor_tb/uut/IR_out
 add wave -noupdate -label R0_out /simple_processor_tb/uut/R0_out
 add wave -noupdate -label R1_out /simple_processor_tb/uut/R1_out
 add wave -noupdate -label mux_out /simple_processor_tb/uut/mux_out
+add wave -noupdate -label sum /simple_processor_tb/uut/sum
 add wave -noupdate -label sel /simple_processor_tb/uut/sel
 add wave -noupdate -label IR_in /simple_processor_tb/uut/IR_in
 add wave -noupdate -label RX_in /simple_processor_tb/uut/RX_in
+add wave -noupdate -label A_in /simple_processor_tb/uut/A_in
+add wave -noupdate -label G_in /simple_processor_tb/uut/G_in
+add wave -noupdate -label A_out /simple_processor_tb/uut/A_out
+add wave -noupdate -label G_out /simple_processor_tb/uut/G_out
+
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {20000 ps} 0}
 quietly wave cursor active 1
