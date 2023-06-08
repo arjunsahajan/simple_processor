@@ -2,8 +2,11 @@ db/
 incremental_db/
 output_files/
 simulation/
+modelsim/work
+greybox_tmp/
 *.qsf
 *.bak
 *.qpf
 *.wlf
-modelsim/work
+*.qip
+inst_mem_bb.v
