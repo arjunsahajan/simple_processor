@@ -1,9 +1,9 @@
 module simple_processor
 (
 	input clk_50MHz,
+	input clk_addr,
 	input run,
 	input reset_n,
-	input [15: 0] DIN,
 	
 	output done
 );
@@ -14,6 +14,26 @@ module simple_processor
 	wire [3: 0] sel;
 	wire IR_in, G_in, A_in;
 	wire [7: 0] RX_in;
+	wire [4: 0] addr;
+	wire [15: 0] DIN;
+	
+	// comment
+	
+	addr_cntr AC
+	(
+		.clk(clk_addr),
+		.reset_n(reset_n),
+		
+		.addr(addr)
+	);
+	
+	inst_mem IM
+	(
+		.address(addr),
+		.clock(clk_addr),
+		
+		.q(DIN)
+	);
 	
 	// Instruction register
 	regn #(.N(16)) IR
