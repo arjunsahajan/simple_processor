@@ -4,29 +4,29 @@ module test_mem_tb ();
 
 	parameter CLOCK_PERIOD = 20;
 
-	reg clk;
+	reg clk_addr;
 	reg reset_n;
 	
 	wire [4: 0] addr;
 	wire [15: 0] DIN;
 	
-	test_mem uut 
+	simple_processor uut
 	(
-		.clk(clk),
+		.clk_addr(clk_addr),
 		.reset_n(reset_n),
-		.addr(addr),
 		
+		.addr(addr),
 		.DIN(DIN)
 	);
 	
 	initial 
 	begin
-		clk <= 1'b0;
+		clk_addr <= 1'b0;
 	end
 
 	always @ (*)
 	begin : Clock_Generator
-		#((CLOCK_PERIOD) / 2) clk <= ~clk;
+		#((CLOCK_PERIOD) / 2) clk_addr <= ~clk_addr;
 	end	
 		
 	initial 

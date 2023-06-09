@@ -17,6 +17,8 @@ add wave -noupdate -label A_in /simple_processor_tb/uut/A_in
 add wave -noupdate -label G_in /simple_processor_tb/uut/G_in
 add wave -noupdate -label A_out /simple_processor_tb/uut/A_out
 add wave -noupdate -label G_out /simple_processor_tb/uut/G_out
+add wave -noupdate -label clk_addr /simple_processor_tb/uut/clk_addr
+add wave -noupdate -label addr /simple_processor_tb/uut/addr
 
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {20000 ps} 0}
