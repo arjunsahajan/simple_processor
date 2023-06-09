@@ -6,17 +6,18 @@ module test_mem_tb ();
 
 	reg clk_addr;
 	reg reset_n;
-	
-	wire [4: 0] addr;
-	wire [15: 0] DIN;
+//	
+//	wire [4: 0] addr;
+//	wire [15: 0] DIN;
+
+	wire done;
 	
 	simple_processor uut
 	(
 		.clk_addr(clk_addr),
 		.reset_n(reset_n),
 		
-		.addr(addr),
-		.DIN(DIN)
+		.done(done)
 	);
 	
 	initial 
