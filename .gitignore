@@ -9,4 +9,5 @@ greybox_tmp/
 *.qpf
 *.wlf
 *.qip
+*.rpt
 inst_mem_bb.v
