@@ -17,8 +17,6 @@ module simple_processor
 	wire [4: 0] addr;
 	wire [15: 0] DIN;
 	
-	// comment
-	
 	addr_cntr AC
 	(
 		.clk(clk_addr),
