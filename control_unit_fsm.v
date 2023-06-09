@@ -132,16 +132,18 @@ module control_unit_fsm
 					begin
 						sel <= 4'b1001;
 						RX_in[RX] <= 1'b0;
+						
+						done <= 1'b1;
 					end
 					
 					SUB:
 					begin
 						sel <= 4'b1001;
 						RX_in[RX] <= 1'b0;
+						
+						done <= 1'b1;
 					end
 				endcase
-				
-				done <= 1'b1;
 			end
 			
 			IDLE:
