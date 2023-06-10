@@ -1,4 +1,6 @@
 db/
+tb/
+modlesim/
 incremental_db/
 output_files/
 simulation/
