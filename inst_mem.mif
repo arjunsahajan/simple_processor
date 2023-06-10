@@ -22,6 +22,8 @@ ADDRESS_RADIX=UNS;
 DATA_RADIX=HEX;
 
 CONTENT BEGIN
-	0   :   101C;
-	[1..31]  :   0000;
+	0   :   1001;
+	1   :   1202;
+	2   :   4001;
+	[3..31]  :   0000;
 END;
