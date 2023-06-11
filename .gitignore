@@ -13,4 +13,4 @@ greybox_tmp/
 *.qip
 *.rpt
 inst_mem_bb.v
-.vwf
+*.vwf
