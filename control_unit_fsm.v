@@ -73,13 +73,7 @@ module control_unit_fsm
 						done <= 1'b1;
 					end
 					
-					ADD:
-					begin
-						sel <= RX;
-						A_in <= 1'b0;
-					end
-					
-					SUB:
+					ADD, SUB:
 					begin
 						sel <= RX;
 						A_in <= 1'b0;
@@ -154,7 +148,7 @@ module control_unit_fsm
 	always @(posedge clk)
 	begin
 	
-		if(!reset_n)
+		if(!reset_n || done)
 			state <= IDLE;
 		else if(!run)
 			state <= T0;
