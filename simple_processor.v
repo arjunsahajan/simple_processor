@@ -13,6 +13,7 @@ module simple_processor
 	output [7: 0] RX_in,
 	output [4: 0] addr,
 	output [15: 0] DIN,
+	output add_sub_ctrl,
 	output done
 );
 	
